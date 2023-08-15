@@ -11,7 +11,7 @@ public class AuthenticationHandlerTests
         {
             ClaimsIssuer = "QuickStart",
             Subject = "QuickStart",
-            ClientSecret = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJCb2lsZXJwbGF0ZSIsImlhdCI6bnVsbCwiZXhwIjpudWxsLCJhdWQiOiIiLCJzdWIiOiJCb2lsZXJwbGF0ZSIsIkFkbWluIjoiQWRtaW4ifQ.MbVuEyc7dP1wzJjDSyUIeZRZYfW1633bxUEge08aHEE"
+            ClientSecret = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJRdWlja1N0YXJ0IiwiaWF0IjpudWxsLCJleHAiOm51bGwsImF1ZCI6IiIsInN1YiI6IlF1aWNrU3RhcnQiLCJBZG1pbiI6IkFkbWluIn0.0atX-jHdAvPWo_6nZaARUAPihZK1lrEgByrB8VbZ8Wk"
         };
         _options = new Mock<IOptionsMonitor<AuthenticationConfiguration>>();
         _options
@@ -83,7 +83,7 @@ public class AuthenticationHandlerTests
     {
         //Arrange
         var context = new DefaultHttpContext();
-        var authorizationHeader = new StringValues("Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJCb2lsZXJwbGF0ZSIsImlhdCI6bnVsbCwiZXhwIjpudWxsLCJhdWQiOiIiLCJzdWIiOiJCb2lsZXJwbGF0ZSIsIkFkbWluIjoiQWRtaW4ifQ.MbVuEyc7dP1wzJjDSyUIeZRZYfW1633bxUEge08aHEE");
+        var authorizationHeader = new StringValues("Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJRdWlja1N0YXJ0IiwiaWF0IjpudWxsLCJleHAiOm51bGwsImF1ZCI6IiIsInN1YiI6IlF1aWNrU3RhcnQiLCJBZG1pbiI6IkFkbWluIn0.0atX-jHdAvPWo_6nZaARUAPihZK1lrEgByrB8VbZ8Wk");
         context.Request.Headers.Add(HeaderNames.Authorization, authorizationHeader);
 
         //Act
@@ -118,7 +118,7 @@ public class AuthenticationHandlerTests
     {
         //Arrange
         var context = new DefaultHttpContext();
-        var authorizationHeader = new StringValues("Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJCb2lsZXJwbGF0ZSIsImlhdCI6bnVsbCwiZXhwIjpudWxsLCJhdWQiOiIiLCJzdWIiOiJUZXN0IiwiQWRtaW4iOiJBZG1pbiJ9.jB_UFOetK4NuwQ7eZvMPCgNWoLhGtn_vWPS7R--K1kQ");
+        var authorizationHeader = new StringValues("Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJRdWlja1N0YXJ0IiwiaWF0IjpudWxsLCJleHAiOm51bGwsImF1ZCI6IiIsInN1YiI6IlRlc3QiLCJBZG1pbiI6IkFkbWluIn0.r1WzUmOAINncwGKtcZwTENlSCQi0eyv8KOD9N8EbNjw");
         context.Request.Headers.Add(HeaderNames.Authorization, authorizationHeader);
 
         //Act
